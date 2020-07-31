@@ -4473,6 +4473,13 @@ mini-css-extract-plugin@^0.4.4:
     schema-utils "^1.0.0"
     webpack-sources "^1.1.0"
 
+mini-sliders@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mini-sliders/-/mini-sliders-1.0.1.tgz#85693377ca201a96807076cb9611b7cbc06768d6"
+  integrity sha1-hWkzd8ogGpaAcHbLlhG3y8BnaNY=
+  dependencies:
+    vue "^2.5.11"
+
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
@@ -7020,6 +7027,13 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-swipe@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/vue-swipe/-/vue-swipe-2.4.0.tgz#af65420417cc65a21a454022f755cb5d661c56ea"
+  integrity sha512-0N5gOED0XF/KsyeF7mT+52J2hGdnHx47xiBbVlZjCxzOyLHWX03W2/G4VhC7bvlMZO7kMt9I/rMPwKZhmk1XTQ==
+  dependencies:
+    wind-dom "0.0.3"
+
 vue-template-compiler@^2.5.17:
   version "2.5.17"
   resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.5.17.tgz#52a4a078c327deb937482a509ae85c06f346c3cb"
@@ -7030,6 +7044,11 @@ vue-template-compiler@^2.5.17:
 vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "http://registry.npm.taobao.org/vue-template-es2015-compiler/download/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
+
+vue@^2.5.11:
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
+  integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
 vue@^2.5.17:
   version "2.5.17"
@@ -7211,6 +7230,11 @@ wide-align@^1.1.0:
   integrity sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==
   dependencies:
     string-width "^1.0.2 || 2"
+
+wind-dom@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/wind-dom/-/wind-dom-0.0.3.tgz#3456e3d959dbebdcbf76ca68c6a4e8142f26360f"
+  integrity sha1-NFbj2Vnb69y/dspoxqToFC8mNg8=
 
 wordwrap@~1.0.0:
   version "1.0.0"
