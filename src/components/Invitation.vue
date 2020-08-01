@@ -45,10 +45,11 @@
 </template>
 
 <script>
+import Slider from './slider'
 
 export default {
   props: ["canOpen"],
-  // components: {  Slider },
+  components: {  Slider },
   data() {
     return {
       isOpening: false,
@@ -74,7 +75,7 @@ export default {
         // target: "_blank", //跳转方式，可选（默认_self）
         width: "100%", //图片宽度，可选（默认800px）
         height: "300px", //图片高度，可选（默认400px）
-        name: "fade", //轮播图动画方式，可选（默认move）
+        name: "move", //轮播图动画方式，可选（默认move）
       },
     };
   },
