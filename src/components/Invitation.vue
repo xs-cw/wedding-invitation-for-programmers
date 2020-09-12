@@ -4,7 +4,12 @@
       <div class="invitation-cover">
         <div class="cover-content" :class="{'invitation-up':isOpening}">
           <div class="content-inside">
-            <Slider :sliders="sliders" />
+            <swiper ref="mySwiper" :options="swiperOption">
+              <swiper-slide v-for="(item,index) in sliders.data" :key="index">
+                <img :src="item.src" alt />
+              </swiper-slide>
+              <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
             <p>我们结婚啦！</p>
             <p>
               <b>Jun & undefined</b>
@@ -45,11 +50,16 @@
 </template>
 
 <script>
-import Slider from './slider'
+// import Slider from './slider'
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
 
 export default {
   props: ["canOpen"],
-  components: {  Slider },
+  components: { Swiper, SwiperSlide },
+  directives: {
+    swiper: directive,
+  },
   data() {
     return {
       isOpening: false,
@@ -57,7 +67,8 @@ export default {
       isFocused: false,
       hasEntered: false,
       sliders: {
-        data: [//传入图片地址和链接跳转地址，必选
+        data: [
+          //传入图片地址和链接跳转地址，必选
           {
             src: require("../images/photo1.jpg"), //图片地址
             url: "#", //链接跳转地址
@@ -70,15 +81,40 @@ export default {
             src: require("../images/photo3.jpg"),
             url: "#",
           },
-        ], 
-        interval: 2000, //轮播动画时间，可选（默认3000ms）
-        // target: "_blank", //跳转方式，可选（默认_self）
-        width: "100%", //图片宽度，可选（默认800px）
-        height: "300px", //图片高度，可选（默认400px）
-        name: "move", //轮播图动画方式，可选（默认move）
+        ],
+      },
+      swiperOption: {
+        direction: "horizontal",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 1000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        effect: "coverflow",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        observer: true,
+        observeParents: true,
+        coverflowEffect: {
+          rotate: 0, // 旋转的角度
+          stretch: -20, // 拉伸   图片间左右的间距和密集度
+          depth: 100, // 深度   切换图片间上下的间距和密集度
+          modifier: 2, // 修正值 该值越大前面的效果越明显
+          slideShadows: false, // 页面阴影效果
+        },
       },
     };
   },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.$swiper;
+    },
+  },
+  mounted() {},
   methods: {
     // 打开邀请函
     openInvitation() {

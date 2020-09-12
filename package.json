@@ -10,7 +10,9 @@
   "dependencies": {
     "any-touch": "^0.7.7",
     "prismjs": "^1.15.0",
-    "vue": "^2.5.17"
+    "swiper": "^6.1.1",
+    "vue": "^2.5.17",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.0",
